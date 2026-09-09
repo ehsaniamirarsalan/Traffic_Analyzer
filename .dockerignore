@@ -1,0 +1,6 @@
+.git
+.gitignore
+Data
+models/*.pt
+work
+*.log

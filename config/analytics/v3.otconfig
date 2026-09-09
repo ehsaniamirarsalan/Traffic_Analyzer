@@ -1,0 +1,305 @@
+{
+    "project": {
+        "name": "Obermayer-camera-v2",
+        "start_date": 1728374402.0,
+        "metadata": null
+    },
+    "videos": [
+        {
+            "path": "..\\..\\Data\\Download\\Standard_SCUCPX_2024-10-08_0000.009_2024-10-08_08-00-02.mp4"
+        }
+    ],
+    "analysis": {
+        "do_events": true,
+        "do_counting": true,
+        "tracks": [
+            "..\\..\\Data\\Download\\Standard_SCUCPX_2024-10-08_0000.009_2024-10-08_08-00-02.ottrk"
+        ],
+        "export": {
+            "save_name": "",
+            "save_suffix": "",
+            "event_formats": [
+                "csv"
+            ],
+            "count_intervals": [
+                15
+            ],
+            "counting_event": "start"
+        },
+        "num_processes": 1,
+        "logfile": "logs"
+    },
+    "sections": [
+        {
+            "id": "2",
+            "name": "Nord Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 248,
+                    "y": 79
+                },
+                {
+                    "x": 376,
+                    "y": 73
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "3",
+            "name": "North Exit",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 481,
+                    "y": 90
+                },
+                {
+                    "x": 550,
+                    "y": 80
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "4",
+            "name": "West Exit",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 171,
+                    "y": 125
+                },
+                {
+                    "x": 151,
+                    "y": 172
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "5",
+            "name": "West Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 146,
+                    "y": 183
+                },
+                {
+                    "x": 96,
+                    "y": 315
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "6",
+            "name": "South Exit",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 276,
+                    "y": 366
+                },
+                {
+                    "x": 718,
+                    "y": 165
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "7",
+            "name": "South Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 660,
+                    "y": 135
+                },
+                {
+                    "x": 692,
+                    "y": 116
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "8",
+            "name": "South Exit (F&R)",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 7,
+                    "y": 321
+                },
+                {
+                    "x": 261,
+                    "y": 324
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "10",
+            "name": "West Exit (F&R)",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 102,
+                    "y": 126
+                },
+                {
+                    "x": 81,
+                    "y": 175
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "11",
+            "name": "North Entry (F&R)",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 178,
+                    "y": 118
+                },
+                {
+                    "x": 256,
+                    "y": 114
+                }
+            ],
+            "plugin_data": {}
+        }
+    ],
+    "flows": [
+        {
+            "id": "21",
+            "name": "Nord Entry --> South Exit",
+            "start": "2",
+            "end": "6",
+            "distance": null
+        },
+        {
+            "id": "22",
+            "name": "Nord Entry --> West Exit",
+            "start": "2",
+            "end": "4",
+            "distance": null
+        },
+        {
+            "id": "23",
+            "name": "West Entry --> South Exit",
+            "start": "5",
+            "end": "6",
+            "distance": null
+        },
+        {
+            "id": "24",
+            "name": "South Entry --> North Exit",
+            "start": "7",
+            "end": "3",
+            "distance": null
+        },
+        {
+            "id": "25",
+            "name": "North Entry (F&R) --> South Exit (F&R)",
+            "start": "11",
+            "end": "8",
+            "distance": null
+        },
+        {
+            "id": "26",
+            "name": "South Exit (F&R) --> North Entry (F&R)",
+            "start": "8",
+            "end": "11",
+            "distance": null
+        },
+        {
+            "id": "27",
+            "name": "West Exit (F&R) --> South Exit (F&R)",
+            "start": "10",
+            "end": "8",
+            "distance": null
+        },
+        {
+            "id": "28",
+            "name": "South Exit (F&R) --> West Exit (F&R)",
+            "start": "8",
+            "end": "10",
+            "distance": null
+        },
+        {
+            "id": "29",
+            "name": "West Exit (F&R) --> North Entry (F&R)",
+            "start": "10",
+            "end": "11",
+            "distance": null
+        },
+        {
+            "id": "30",
+            "name": "North Entry (F&R) --> West Exit (F&R)",
+            "start": "11",
+            "end": "10",
+            "distance": null
+        }
+    ],
+    "remark": ""
+}

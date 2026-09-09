@@ -1,0 +1,9 @@
+.env
+CLAUDE.md
+Data/**
+!Data/.gitkeep
+native/
+.tools/
+models/*.pt
+config/analytics/logs/**
+*.log

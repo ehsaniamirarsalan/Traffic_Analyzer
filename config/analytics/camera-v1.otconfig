@@ -1,0 +1,136 @@
+{
+    "project": {
+        "name": "Obermeyer-camera-v1",
+        "start_date": 1728374402.0,
+        "metadata": null
+    },
+    "videos": [
+        {
+            "path": "..\\..\\Data\\Download\\Standard_SCUCPX_2024-10-08_0000.009_2024-10-08_08-00-02.mp4"
+        }
+    ],
+    "analysis": {
+        "do_events": true,
+        "do_counting": true,
+        "tracks": [
+            "..\\..\\Data\\Download\\Standard_SCUCPX_2024-10-08_0000.009_2024-10-08_08-00-02.ottrk"
+        ],
+        "export": {
+            "save_name": "",
+            "save_suffix": "",
+            "event_formats": [
+                "csv"
+            ],
+            "count_intervals": [
+                15
+            ],
+            "counting_event": "start"
+        },
+        "num_processes": 1,
+        "logfile": "logs"
+    },
+    "sections": [
+        {
+            "id": "1",
+            "name": "South Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 653,
+                    "y": 348
+                },
+                {
+                    "x": 303,
+                    "y": 57
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "2",
+            "name": "North Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 712,
+                    "y": 141
+                },
+                {
+                    "x": 391,
+                    "y": 51
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "3",
+            "name": "East Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 21,
+                    "y": 216
+                },
+                {
+                    "x": 345,
+                    "y": 253
+                }
+            ],
+            "plugin_data": {}
+        },
+        {
+            "id": "4",
+            "name": "West Entry",
+            "type": "line",
+            "relative_offset_coordinates": {
+                "section-enter": {
+                    "x": 0.5,
+                    "y": 0.5
+                }
+            },
+            "coordinates": [
+                {
+                    "x": 286,
+                    "y": 111
+                },
+                {
+                    "x": 215,
+                    "y": 144
+                },
+                {
+                    "x": 15,
+                    "y": 182
+                }
+            ],
+            "plugin_data": {}
+        }
+    ],
+    "flows": [
+        {
+            "id": "19",
+            "name": "East Entry --> South Entry",
+            "start": "3",
+            "end": "1",
+            "distance": 0
+        }
+    ],
+    "remark": ""
+}

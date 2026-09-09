@@ -1,0 +1,57 @@
+name: traffic-detection
+
+x-otvision-common: &otvision-common
+  working_dir: /opt/OTVision
+  volumes:
+    - ./Data:/data
+    - ./config/otvision:/config/otvision:ro
+    - ./models:/models:ro
+    - ultralytics-cache:/root/.cache/Ultralytics
+  environment:
+    YOLO_CONFIG_DIR: /root/.cache/Ultralytics
+    PYTHONUNBUFFERED: "1"
+  init: true
+
+services:
+  otvision-cpu:
+    <<: *otvision-common
+    image: traffic-detection/otvision-cpu:${OTVISION_VERSION:-v0.7.2}
+    build:
+      context: .
+      dockerfile: docker/otvision/Dockerfile
+      args:
+        OTVISION_VERSION: ${OTVISION_VERSION:-v0.7.2}
+        OTVISION_INFERENCE: inference_cpu
+        UV_VERSION: ${UV_VERSION:-0.9.18}
+
+  otvision-gpu:
+    <<: *otvision-common
+    image: traffic-detection/otvision-gpu:${OTVISION_VERSION:-v0.7.2}
+    build:
+      context: .
+      dockerfile: docker/otvision/Dockerfile
+      args:
+        OTVISION_VERSION: ${OTVISION_VERSION:-v0.7.2}
+        OTVISION_INFERENCE: inference_cuda
+        UV_VERSION: ${UV_VERSION:-0.9.18}
+    gpus: all
+
+  otanalytics:
+    image: traffic-detection/otanalytics:${OTANALYTICS_VERSION:-v0.7.4}
+    build:
+      context: .
+      dockerfile: docker/otanalytics/Dockerfile
+      args:
+        OTANALYTICS_VERSION: ${OTANALYTICS_VERSION:-v0.7.4}
+        UV_VERSION: ${UV_VERSION:-0.9.18}
+    working_dir: /opt/OTAnalytics
+    volumes:
+      - ./Data:/data
+      - ./config/analytics:/config/analytics:ro
+    environment:
+      MPLBACKEND: Agg
+      PYTHONUNBUFFERED: "1"
+    init: true
+
+volumes:
+  ultralytics-cache:
