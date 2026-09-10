@@ -26,7 +26,7 @@ if Docker isn't available on the new machine; skip them.
 | App | Required? | Why | Get it from |
 |---|---|---|---|
 | **NVIDIA GPU driver** | Yes | Everything downstream (`torch.cuda`, TensorRT) needs a working driver; `preflight` calls `nvidia-smi` and hard-fails without it | nvidia.com — regular Game Ready/Studio driver is fine, no separate "CUDA driver" package needed |
-| **PowerShell** | Yes, but already built into Windows | Both controllers are `.ps1` scripts | ships with Windows |
+| **PowerShell** | Yes, but already built into OS Windows | Both controllers are `.ps1` scripts | ships with Windows |
 | **Internet access** (one-time) | Yes | The install step downloads ~2–3 GB of PyTorch/CUDA/TensorRT wheels plus the rest of each app's dependencies | — |
 | **`uv`** | Yes, one way or another | Builds/manages the Python 3.12 venvs | either copy `.tools/uv` from this machine (nothing to install), or run `irm https://astral.sh/uv/install.ps1 \| iex` in PowerShell on the new machine |
 
