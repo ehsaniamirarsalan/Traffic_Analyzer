@@ -18,7 +18,7 @@ Start with `NATIVE_USER_MANUAL.md`:
 
 ## Docker workflow (optional)
 
-If Docker is repaired later, `USER_MANUAL.md` documents that path:
+----------------------
 
 ```powershell
 .\traffic.ps1 preflight
