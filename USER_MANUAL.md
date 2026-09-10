@@ -97,7 +97,7 @@ configuration once for each camera position:
 7. Copy it to `config\analytics`, for example:
 
    ```text
-   config\analytics\obermayer-camera-v1.otflow
+   config\analytics\blabla.otflow
    ```
 
 Use a new version whenever the camera moves, rotates, zooms, changes resolution,
